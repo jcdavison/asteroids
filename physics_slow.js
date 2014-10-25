@@ -175,6 +175,7 @@ var render_visualization = function () {
 
 render_visualization()
 
-setTimeout(function(){
+setInterval(function(){
+  console.log("slow")
   render_visualization()
   }, 8000)
