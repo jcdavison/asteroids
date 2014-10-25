@@ -52,10 +52,10 @@ Physics(function (world) {
         x: viewWidth / 2
         ,y: viewHeight / 2 - 240
         ,vx: -0.15
-        ,mass: 1
+        ,mass: 0.0000001
         ,radius: 30
         ,styles: {
-            fillStyle: '#cb4b16'
+            fillStyle: 'blue'
             ,angleIndicator: '#72240d'
         }
     }));
@@ -65,10 +65,10 @@ Physics(function (world) {
         ,y: viewHeight / 2
         ,radius: 50
         ,mass: 20
-        ,vx: 0.007
+        ,vx: 0.000
         ,vy: 0
         ,styles: {
-            fillStyle: '#6c71c4'
+            fillStyle: 'red'
             ,angleIndicator: '#3b3e6b'
         }
     }));
@@ -79,7 +79,7 @@ Physics(function (world) {
         x: -20
         ,y: viewHeight - 150
         ,vx: 2
-        ,mass: 4
+        ,mass: 0.0000001
         ,radius: 20
         ,restitution: 0.5
         ,angularVelocity: 0
@@ -120,7 +120,7 @@ Physics(function (world) {
         Physics.behavior('interactive', { el: renderer.el })
         ,Physics.behavior('newtonian', { strength: .5 })
         ,Physics.behavior('body-impulse-response')
-        ,edgeBounce
+        // ,edgeBounce
     ]);
 
     // subscribe to ticker to advance the simulation
