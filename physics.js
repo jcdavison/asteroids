@@ -52,7 +52,7 @@ Physics(function (world) {
         x: viewWidth / 2
         ,y: viewHeight / 2 - 240
         ,vx: -0.15
-        ,mass: 0.0000001
+        ,mass: 0.000001
         ,radius: 30
         ,styles: {
             fillStyle: 'blue'
@@ -75,12 +75,33 @@ Physics(function (world) {
 
     // Adding projectile
 
-    projectile = Physics.body('circle', {
-        x: -20
-        ,y: viewHeight - 150
-        ,vx: 1
+    // projectile = Physics.body('circle', {
+    //     x: 0
+    //     ,y: 200
+    //     ,vx: 0.5
+    //     ,mass: 0.00001
+    //     ,radius: 15
+    //     ,restitution: 0.5
+    //     ,angularVelocity: 0
+    //     ,label: 'bullet'
+    //     ,styles: {
+    //         fillStyle: '#d33682'
+    //         ,angleIndicator: '#751b4b'
+    //     }
+    // });
+
+    // setTimeout(function(){
+
+    //     world.add( projectile );
+
+    // }, 2000);
+    
+   projectile = Physics.body('circle', {
+        x: 0
+        ,y: 200
+        ,vx: 0.2
         ,mass: 0.00001
-        ,radius: 20
+        ,radius: 15
         ,restitution: 0.5
         ,angularVelocity: 0
         ,label: 'bullet'
@@ -90,12 +111,29 @@ Physics(function (world) {
         }
     });
 
-    setTimeout(function(){
+    world.add( projectile );
+    
+    // setInterval(function() {
 
-        world.add( projectile );
+    //   projectile = Physics.body('circle', {
+    //       x: 0
+    //       ,y: 200
+    //       ,vx: 0.3
+    //       ,mass: 0.00001
+    //       ,radius: 15
+    //       ,restitution: 0.5
+    //       ,angularVelocity: 0
+    //       ,label: 'bullet'
+    //       ,styles: {
+    //           fillStyle: '#d33682'
+    //           ,angleIndicator: '#751b4b'
+    //       }
+    //   });
 
-    }, 2000);
+    //   world.add( projectile );
+    //     console.log("setinterval working")
 
+    // }, 5050);
 
     // add some fun interaction
     var attractor = Physics.behavior('attractor', {
