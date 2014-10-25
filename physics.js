@@ -2,6 +2,8 @@
 // Simple example of a newtonian orbit
 //
 Physics(function (world) {
+  // alert(window.innerWidth)
+  // alert(window.innerHeight)
 
     var viewWidth = window.innerWidth
         ,viewHeight = window.innerHeight
@@ -13,7 +15,7 @@ Physics(function (world) {
 
     // create a renderer
     renderer = Physics.renderer('canvas', {
-        el: 'viewport'
+        el: 'asteroid'
         ,width: viewWidth
         ,height: viewHeight
     });
@@ -98,10 +100,10 @@ Physics(function (world) {
     
    projectile = Physics.body('circle', {
         x: 0
-        ,y: 200
+        ,y: 100
         ,vx: 0.2
         ,mass: 0.00001
-        ,radius: 15
+        ,radius: 12
         ,restitution: 0.5
         ,angularVelocity: 0
         ,label: 'bullet'
