@@ -78,8 +78,8 @@ Physics(function (world) {
     projectile = Physics.body('circle', {
         x: -20
         ,y: viewHeight - 150
-        ,vx: 2
-        ,mass: 0.0000001
+        ,vx: 1
+        ,mass: 0.00001
         ,radius: 20
         ,restitution: 0.5
         ,angularVelocity: 0
