@@ -1,4 +1,4 @@
-html,body {
+tml,body {
 	background-color: #C8C8C8;
 }
 
@@ -55,8 +55,6 @@ html,body {
 }
 
 .sim-text {
-  position: fixed;
-  bottom: 0;
   color: white;
   font-size: 30px;
 }
